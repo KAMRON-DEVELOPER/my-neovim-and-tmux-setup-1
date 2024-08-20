@@ -1,0 +1,50 @@
+
+# system alias
+alias sourcebash="source ~/.bashrc"
+alias sourcezsh="source ~/.zshrc"
+alias sourcetmux="tmux source ~/.tmux/tmux.conf"
+alias update="sudo apt update && sudo apt upgrade"
+alias ls='ls --color=auto'
+alias vi='vim'
+alias nv='nvim'
+alias nvimconf="nvim ~/.config/nvim/init.lua"
+alias tmuxconf="nvim ~/.tmux/tmux.conf"
+alias zshconf="nvim ~/.zshrc"
+alias bashconf="nvim ~/.bashrc"
+# Unalias desk if it exists
+unalias desk 2>/dev/null
+desk() {
+    if [ -z "$1" ]; then
+        cd ~/Desktop
+    else
+        cd ~/Desktop/"$1" || echo "Directory not found: ~/Desktop/$1"
+    fi
+}
+# Unalias home if it exists
+unalias home 2>/dev/null
+home() {
+    if [ -z "$1" ]; then
+        cd ~
+    else
+        cd ~/"$1" || echo "Directory not found: ~/Desktop/$1"
+    fi
+}
+
+
+# programming language alias
+alias actv="source venv/bin/activate"
+alias acte="source env/bin/activate"
+alias postgres="sudo -u postgres psql"
+alias mmig="python manage.py makemigrations"
+alias mig="python manage.py migrate"
+# Unalias runs if it exists
+unalias runs 2>/dev/null
+runs() {
+    if [ -z "$1" ]; then
+        python manage.py runserver
+    else
+        python manage.py runserver "$1"
+    fi
+}
+
+
