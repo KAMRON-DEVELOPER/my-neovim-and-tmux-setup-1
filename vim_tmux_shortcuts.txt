@@ -1,0 +1,136 @@
+******************************** TMUX ***********************************
+$ tmux new -s new-session == create new session
+$ tmux a == attach to last session
+$ tmux a -t session_name == attachin to given session name
+$ tmux ls == show all sessions
+$ shift + </> == change windows
+$ alt + </^/> == change panes
+<prefix> + d == deattach from tmux session
+<prefix> + s == navigate beetween sessions
+<prefix> + w == preview session
+<prefix> + : == type command to navbar
+<prefix> + z == zoom or toggle fullscreen
+<prefix> + {/} == move the current pain to right/left
+<prefix> + ! == take the current pains to new window
+<prefix> + V == split vertically 
+<prefix> + H == split horizontally
+<prefix> + alt + <^> == resize panes
+<prefix> + V == split vertically
+# tmux-resurrect
+prefix + Ctrl-s == save session even kill-server!!!
+prefix + Ctrl-r == restore session even killed server!!!
+******************************** TMUX ***********************************
+
+
+
+
+******************************** VIM ***********************************
+NORMAL MODE
+-- Editing Commands
+:%d == delete all code from file
+ggdG == delete all code from file
+dd == Delete the current line
+D == Delete from the cursor to the end of the line
+C == Change from the cursor to the end of the line and enter Insert mode
+cw == Change from cursor to end of word and enter Insert mode
+cb == Change from cursor to beginning of word and enter Insert mode
+u == Undo the last change
+i == Enter Insert mode before the cursor
+I = Enter Insert mode at beginning of the line
+a == Enter Insert mode after the cursor
+A == Enter Insert mode at the end of the line
+o == Insert a new line below the current line and enter Insert mode
+O == Insert a new line above the current line and enter Insert mode
+
+
+
+
+VISUAL MODE
+v == Enter Visual mode and select text character by character
+V == Enter Visual mode and select text line by line
+y == Yank (copy) the selected line
+d == Delete the selected text
+c == Change the selected text and enter Insert mode
+-- Search and Replace
+/ == Search forward for a pattern
+? == Search backward for a pattern
+:%s/pattern/replacement/g == Replace all occurrences of 'pattern' with 'replacement' in the entire file
+-- Splits and Tabs
+:sp == Split the window horizontally
+:vsp == Split the window vertically
+:tabe == Create a new tab
+:tabc == Close the current tab
+:tabn == Go to the next tab
+:tabp == Go to the previous tab
+	
+
+
+
+CUSTOM CONFIGS
+-- nvim-treesitter
+ctrl + space == magic select, initial then incremenatal
+backspace == decremental selection
+
+-- nvim-tree
+ctrl + r == fename file in sidebar area
+<leader>r == reload files
+ctrl + n == toggle sidebar
+ctrl + t == bring selected sidebar file to new tab
+select + tab == preview
+
+--telescope(Fuffy find)
+<leader>ff == Fuzzy find files in cwd
+<leader>fg == Fuzzy live grep
+<leader><leader> == find from old or recent used files
+
+-- nvim-neo-tree
+ctrl + n == open left sidebar
+a == create file or folder
+d == delete file
+r == rename
+y == copy to clipboard
+x == cut to clipboard
+p == paste from clipboard
+s == split verticaly selected(cursor) file
+S == split horizontally selected(cursor) file
+<leader>m == show file switcher menu pop up
+shift + p == files preview using selecting
+
+-- stevearc/oil
+"-" == pop up to selecting files and search
+
+
+-- lsp_config
+K == hover
+<leader>gd == definition
+<leader>gr == references
+<leader>ca == code_action
+
+-- none-ls or null-ls
+<leader>cf == format
+	
+
+-- cpm
+ctrl + b == scroll docs
+ctrl + f == scrool docs
+ctrl + space == complete
+ctrl + e == abort
+<CR> == confirm
+
+
+******************************** VIM ***********************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
